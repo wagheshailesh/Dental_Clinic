@@ -1,0 +1,24 @@
+==================== 2026-08-19T17:03:56.095879Z | 01a01afa-c0ba-74b2-94ab-b3c1e638a30e ====================
+17:03:56.096559 [info ]: Installing dbt project and profile setup
+17:03:56.152056 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+17:03:56.158189 [info ]: Success Project created successfully!
+17:03:56.158489 [info ]: Info Project name: MatrixDentalClinic
+17:03:56.158664 [info ]: Info Project directory: MatrixDentalClinic
+17:04:26.916634 [info ]: Info Skipping profile setup.
+17:04:26.917959 [info ]: Validating profile inputs, adapters, and connection
+
+17:04:26.918479 [info ]: dbt-fusion 2.0.0-preview.205
+17:04:26.919672 [info ]: Started loading project
+17:04:26.927526 [info ]: Loading ~/.dbt/profiles.yml
+17:04:26.928145 [info ]: Finished loading project [  0.01s]
+17:04:26.929575 [error]: [IoError (dbt1001)]: Profile 'MatrixDentalClinic' not found in profiles.yml
+  --> .\dbt_project.yml:3:10
+17:04:27.094920 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [31.0s]
+==================== 2026-08-19T18:01:06.693876Z | 01a01b2f-197a-7d03-9c6e-52cf8a01548e ====================
+18:01:06.698425 [info ]: Installing dbt project and profile setup
+18:01:06.774035 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+18:01:06.782801 [info ]: Success Project created successfully!
+18:01:06.783262 [info ]: Info Project name: jaffle_shop
+18:01:06.783954 [info ]: Info Project directory: jaffle_shop

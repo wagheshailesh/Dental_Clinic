@@ -1,0 +1,70 @@
+name: MatrixDentalClinic
+
+profile: MatrixDentalClinic
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  MatrixDentalClinic:
+    +materialized: view
+    
+    landing:
+      +materialized: table
+      +schema: Matrix_Landing
+      +tags: ["landing"]
+      +description: "Landing models for the Matrix Dental Clinic project."
+    
+    raw:
+      +materialized: table
+      +schema: Matrix_Raw
+      +tags: ["raw"]
+      +description: "Raw models for the Matrix Dental Clinic project."
+
+    curation:
+      +materialized: table
+      +schema: Matrix_Curation
+      +tags: ["curation"]
+      +description: "Curation models for the Matrix Dental Clinic project."
+    
+    EDW:
+      +materialized: table
+      +schema: Matrix_EDW
+      +tags: ["edw"]
+      +description: "Enterprise Data Warehouse models for the Matrix Dental Clinic project."
+    
+    Semantic:
+      +materialized: table
+      +schema: Matrix_Semantic
+      +tags: ["semantic"]
+      +description: "Semantic models for the Matrix Dental Clinic project."
+
+seeds:
+  MatrixDentalClinic:
+    +tags: ["seed"]
+
+    Patient_Payments:
+      +column_types:
+        Patient_Id: NUMBER
+        PaymentMode: VARCHAR(50)
+        Visitdate: DATE
+        paymentamount: NUMBER(38,10)
+
+    PatientDetails:
+      +column_types:
+        Patient_Id: NUMBER
+        PatientName: VARCHAR(100)
+        email: VARCHAR(100)
+        gender: VARCHAR(10)
+        address: VARCHAR(200)
+        phonenumber: VARCHAR(20)
+
+on-run-start:
+  - "{{ log('Starting dbt run for Matrix Dental Clinic project', info=True) }}"
+
+on-run-end:
+  - "{{ log('Completed dbt run for Matrix Dental Clinic project', info=True) }}"

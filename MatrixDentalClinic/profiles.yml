@@ -1,0 +1,16 @@
+ MatrixDentalClinic:
+  target: development
+  outputs:
+    development:
+      type: snowflake
+      account: "YGAFZOS-MI13593"
+      user: "{{ env_var('DBT_USER', 'none')}}"
+
+      role: "{{ env_var('DBT_ROLE')}}"
+      warehouse: "{{ env_var('DBT_WAREHOUSE')}}"
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH')}}"
+      private_key_passphrase: "{{ env_var('DBT_PRIVATE_KEY_PASSPHRASE')}}"
+
+      database: "{{ env_var('DBT_DATABASE', 'TEST_DENTAL_CLINIC')}}"
+      schema: "{{ env_var('DBT_SCHEMA', 'MATRIX_LANDING')}}"
+      threads: 4
