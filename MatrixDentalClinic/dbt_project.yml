@@ -1,6 +1,6 @@
-name: MatrixDentalClinic
+name: ClinicProject
 
-profile: MatrixDentalClinic
+profile: ClinicProject
 
 seed-paths: ["seeds"]
 model-paths: ["models"]
@@ -10,41 +10,41 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  MatrixDentalClinic:
+  ClinicProject:
     +materialized: view
     
     landing:
       +materialized: table
-      +schema: Matrix_Landing
+      +schema: Landing
       +tags: ["landing"]
-      +description: "Landing models for the Matrix Dental Clinic project."
+      +description: "Landing models for the ClinicProject."
     
     raw:
       +materialized: table
-      +schema: Matrix_Raw
+      +schema: Raw
       +tags: ["raw"]
       +description: "Raw models for the Matrix Dental Clinic project."
 
     curation:
       +materialized: table
-      +schema: Matrix_Curation
+      +schema: Curation
       +tags: ["curation"]
       +description: "Curation models for the Matrix Dental Clinic project."
     
     EDW:
       +materialized: table
-      +schema: Matrix_EDW
+      +schema: EDW
       +tags: ["edw"]
       +description: "Enterprise Data Warehouse models for the Matrix Dental Clinic project."
     
     Semantic:
       +materialized: table
-      +schema: Matrix_Semantic
+      +schema: Semantic
       +tags: ["semantic"]
       +description: "Semantic models for the Matrix Dental Clinic project."
 
 seeds:
-  MatrixDentalClinic:
+  ClinicProject:
     +tags: ["seed"]
 
     Patient_Payments:

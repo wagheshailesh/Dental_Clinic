@@ -1,4 +1,4 @@
- MatrixDentalClinic:
+ ClinicProject:
   target: development
   outputs:
     development:
@@ -11,6 +11,6 @@
       private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH')}}"
       private_key_passphrase: "{{ env_var('DBT_PRIVATE_KEY_PASSPHRASE')}}"
 
-      database: "{{ env_var('DBT_DATABASE', 'TEST_DENTAL_CLINIC')}}"
-      schema: "{{ env_var('DBT_SCHEMA', 'MATRIX_LANDING')}}"
+      database: "{{ env_var('DBT_DATABASE', 'CLINIC_DB')}}"
+      schema: "{{ env_var('DBT_SCHEMA', 'LANDING')}}"
       threads: 4
